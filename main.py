@@ -49,11 +49,11 @@ class Account:
         return self.deposit
 
 def intro():
-    print("\t\t\t\t**********************")
-    print("\t\t\t\tBANK MANAGEMENT SYSTEM")
-    print("\t\t\t\t**********************")
-    print("\t\t\t\tBrought To You By:")
-    print("\t\t\t\tprojectworlds.in")
+    print("**********************")
+    print("BANK MANAGEMENT SYSTEM")
+    print("**********************")
+    print("Welcome to Digital Bank")
+    print("Enter Your Name")
     input()
 
 def writeAccount():
@@ -129,6 +129,7 @@ def deleteAccount(num):
         pickle.dump(newlist, outfile)
         outfile.close()
         os.rename('newaccounts.data', 'accounts.data')
+        print("Your Accound Has been Deleted")
 
 def modifyAccount(num):
     file = pathlib.Path("accounts.data")
@@ -167,6 +168,7 @@ ch = ''
 num = 0
 intro()
 while ch != '8':
+    print("Welcome To DigitalBank")
     print("\tMAIN MENU")
     print("\t1. NEW ACCOUNT")
     print("\t2. DEPOSIT AMOUNT")
